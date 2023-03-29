@@ -1,0 +1,100 @@
+*{/*universal things add in every project*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: auto;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px; /*it make a distance between screen and person-- it enable 3D game in the project*/
+}
+
+.container{
+    position: relative;
+    display: flex; /*Align item in the center using the below to entry*/
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;/*jis container me 3-d wali chize karne wale h, vha pe ye karna padega*/
+    z-index: -1; /*it enable the positioning of the images, ek ke upar ek */
+}
+
+.background{
+    transform: translateZ(-40px) scale(6); /* translateZ se image z-axis me peeche hojayege and scale is size increase hojayega*/
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);/*same as before*/
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover; /*fit image in the container completely*/
+}
+
+.heading{
+    font-size: 1000%;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    text-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0; /*Need to check*/
+}
+
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0; /*it will be privided by the designer (Need to know)*/
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed; /*image background me chale jayegi and fixed ho jayegi and cheeze espe se scoll kare gi*/
+    background-size: cover;/*enn teeno se image perfectily align ho jayegi center me*/
+    background-position: center;
+    height: 500px;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%);/*Learn it again, use notes*/
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);/*New way of adding image in CSS file*/
+}
+
+.bg2{
+    background-image: url(sport-2.jpg);/*New way of adding image in CSS file*/
+}
+
+.bg3{
+    background-image: url(sport-3.jpg);/*New way of adding image in CSS file*/
+}
+
